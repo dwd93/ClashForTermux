@@ -34,14 +34,8 @@ echo ""
 
 sleep 2
 
-echo -e $b"➤ "$w" coppying vmess.yaml: "$g"vmess"$w
-cp -r -f vmess.yaml $HOME/.config/clash
-echo ""
-
-sleep 2
-
-echo -e $b"➤ "$w" coppying trojan.yaml: "$g"trojan"$w
-cp -r -f trojan.yaml $HOME/.config/clash
+echo -e $b"➤ "$w" coppying DWD_vpn: "$g"vpn"$w
+cp -r -f DWD_vpn.zip $HOME/.config/clash
 echo ""
 
 sleep 2
@@ -58,7 +52,16 @@ unzip yacd-gh-pages.zip
 echo ""
 
 sleep 2
+
+cd $HOME/.config/clash
+echo -e $b"➤ "$w" extracting DWD_vpn: "$g"vpn"$w
+unzip DWD_vpn.zip
+echo ""
+
+sleep 2
 rm -r -f yacd-gh-pages.zip
+sleep 2
+rm -r -f DWD_vpn.zip
 sleep 2
 cd
 rm -r -f ClashForTermux
