@@ -1,9 +1,9 @@
 # Clash For Termux Without Root
 
 # Install
-- apt update && apt install upgrade -y
+- pkg update && pkg install upgrade -y
 
-- apt install git -y
+- pkg install git -y
 
 - git clone https://github.com/dwd93/ClashForTermux.git
 
