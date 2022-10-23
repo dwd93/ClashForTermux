@@ -3189,7 +3189,7 @@ rules:
 proxy-providers:
   VPN:
     type: file
-    path: "./proxy_provider/vpn.yaml"
+    path: "./DWD_vpn/vpn.yaml"
     health-check:
       enable: false
       url: http://www.gstatic.com/generate_204
