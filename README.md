@@ -5,6 +5,8 @@
 
 - pkg install git -y
 
+- pkg install micro -y
+
 - git clone https://github.com/dwd93/ClashForTermux.git
 
 - cd ClashForTermux && bash install.sh
@@ -12,7 +14,9 @@
 - cd
 
 # Edit akun VPN
-- ketik nano .config/clash/DWD_vpn/vpn.yaml
+- ketik micro .config/clash/DWD_vpn/vpn.yaml
+- ctrl + s -> untuk save
+- ctrl + q -> untuk keluar
 
 # Running Clash
 - ketik "clash" tanpa tanda petik lalu enter
