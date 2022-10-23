@@ -1,0 +1,150 @@
+# Config Universal for OpenClash, ClashForAndroid & ClashForMagisk
+# Config by. Darwandi
+# Youtube ->> https://youtube.com/channel/UCEivnkOPZQsr8UzPmnH8a2w
+# Group Telegram ->> https://t.me/+xCof7RFczCNhMzFl
+
+
+# Jangan diedit jika tidak paham
+rule-providers:
+  DWD_Ads:
+    type: http
+    behavior: classical
+    path: "./DWD_rule/DWD_Ads.yaml"
+    url: https://raw.githubusercontent.com/dwd93/ClashForAndroid/main/rule/DWD_Ads.yaml
+  DWD_Sosmed:
+    type: http
+    behavior: classical
+    path: "./DWD_rule/DWD_Sosmed.yaml"
+    url: https://raw.githubusercontent.com/dwd93/ClashForAndroid/main/rule/DWD_Sosmed.yaml
+  DWD_Streaming:
+    type: http
+    behavior: classical
+    path: "./DWD_rule/DWD_Streaming.yaml"
+    url: https://raw.githubusercontent.com/dwd93/ClashForAndroid/main/rule/DWD_Streaming.yaml
+  DWD_Gaming:
+    type: http
+    behavior: classical
+    path: "./DWD_rule/DWD_Gaming.yaml"
+    url: https://raw.githubusercontent.com/dwd93/ClashForAndroid/main/rule/DWD_Gaming.yaml
+    interval: 86400
+    
+# Base config
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+ipv6: false
+mode: rule
+log-level: silent
+allow-lan: true
+external-controller: 0.0.0.0:9090
+secret: "DWD"
+bind-address: "*"
+unified-delay: true
+profile:
+  store-selected: true
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: redir-host
+  listen: 0.0.0.0:7874
+  nameserver:
+    - 8.8.8.8
+    - 1.0.0.1
+    - https://dns.google/dns-query
+  fallback:
+    - 1.1.1.1
+    - 8.8.4.4
+    - https://cloudflare-dns.com/dns-query
+    - 112.215.203.254
+  default-nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+    - 112.215.203.254
+    
+# Jangan diedit jika tidak paham
+proxy-groups:
+  - name: LOADBALANCE
+    type: load-balance
+    strategy: round-robin
+    disable-udp: false
+    url: http://www.gstatic.com/generate_204
+    interval: '300'
+    proxies:
+      - TROJAN
+      - VMESS
+  - name: BEST-PING
+    type: url-test
+    disable-udp: false
+    url: http://www.gstatic.com/generate_204
+    interval: '300'
+    tolerance: '150'
+    proxies:
+      - TROJAN
+      - VMESS
+  - name: UNIVERSAL
+    type: select
+    proxies:
+      - LOADBALANCE
+      - BEST-PING
+      - DIRECT
+  - name: GAME
+    type: select
+    proxies:
+      - LOADBALANCE
+      - BEST-PING
+      - DIRECT
+  - name: SOSMED
+    type: select
+    proxies:
+      - LOADBALANCE
+      - BEST-PING
+      - DIRECT
+  - name: STREAMING
+    type: select
+    proxies:
+      - LOADBALANCE
+      - BEST-PING
+      - DIRECT
+  - name: ADBLOCK
+    type: select
+    proxies:
+      - LOADBALANCE
+      - BEST-PING
+      - REJECT
+rules:
+  - RULE-SET,DWD_Ads,ADBLOCK
+  - RULE-SET,DWD_Gaming,GAME
+  - RULE-SET,DWD_Sosmed,SOSMED
+  - RULE-SET,DWD_Streaming,STREAMING
+  - MATCH,UNIVERSAL
+
+# Edit untuk memasukkan akun & bug, untuk format penulisan sama seperti di Openclash atau contoh di Config Generator sub.bonds.id
+# Perhatian!! untuk bagian nama jangan dirubah jika tidak paham edit proxy-groups
+
+proxies:
+  - name: TROJAN
+    server: idtj-herza.bonds.id
+    port: 443
+    type: trojan
+    password: 71502cd0-5020-11ed-a074-1239d0255272
+    skip-cert-verify: true
+    sni: bug.com
+    udp: true
+  - name: VMESS
+    server: v2ray2.udpgw.com
+    port: 443
+    type: vmess
+    uuid: 70512e7c-aa62-443a-aed6-a83bc43f3ceb
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: bug.com
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: bug.com
+    udp: true
