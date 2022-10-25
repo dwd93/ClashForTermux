@@ -14,7 +14,7 @@ ipv6: false
 mode: rule
 log-level: silent
 allow-lan: true
-external-controller: 0.0.0.0:9090
+external-controller: 127.0.0.1:7890
 secret: "DWD"
 bind-address: "*"
 unified-delay: true
@@ -2626,7 +2626,7 @@ rules:
   # -- Rule by DARWANDI --# -- Rule by DARWANDI -- >> Plants VS Zombies,GAME
   - DOMAIN-SUFFIX,plantsvszombies2.com,GAME
   - DOMAIN-SUFFIX,pvzgw2.com,GAME
-  - DOMAIN-SUFFIX,pvzheroes.com
+  - DOMAIN-SUFFIX,pvzheroes.com,GAME
   # -- Rule by DARWANDI --# -- Rule by DARWANDI -- > Riot,GAME
   - DOMAIN-SUFFIX,historyofdota.com,GAME
   - DOMAIN-SUFFIX,historyofdota.net,GAME
