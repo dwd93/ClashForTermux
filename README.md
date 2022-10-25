@@ -1,7 +1,7 @@
 # Clash For Termux Without Root
 
 # Install
-- apt update && atp install upgrade -y
+- apt update && apt install upgrade -y
 
 - apt install git -y
 
