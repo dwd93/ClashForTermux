@@ -110,19 +110,19 @@ rules:
   - IP-CIDR,75.126.150.0/16,AKRAB
   - DST-PORT,5228,AKRAB
   - DST-PORT,5222,AKRAB
-  - DST-PORT,38211
+  - DST-PORT,38211,AKRAB
 
   # -- Rule by DARWANDI -- > MICROSOFT
   - DOMAIN-SUFFIX,smartscreen-prod.microsoft.com,AKRAB
   - DOMAIN-SUFFIX,self.events.data.microsoft.com,AKRAB
   - DOMAIN-SUFFIX,nav.smartscreen.microsoft.com,AKRAB
-  - DOMAIN-SUFFIX,edge.microsoft.com
+  - DOMAIN-SUFFIX,edge.microsoft.com,AKRAB
   
   # -- Rule by DARWANDI -- > RUANGGURU
   - DOMAIN-SUFFIX,ruangguru.com,AKRAB
   - DOMAIN-SUFFIX,belajar.ruangguru.com,AKRAB
   - DOMAIN-SUFFIX,midtrans.com,AKRAB
-  - DOMAIN-SUFFIX,api.midtrans.com
+  - DOMAIN-SUFFIX,api.midtrans.com,AKRAB
   
   # -- Rule by DARWANDI -- > ZOOM
   - DOMAIN-SUFFIX,zoom.us,AKRAB
@@ -152,14 +152,14 @@ rules:
   - DST-PORT,8801,AKRAB
   - DST-PORT,8802,AKRAB
   - DST-PORT,3478,AKRAB
-  - DST-PORT,3479
+  - DST-PORT,3479,AKRAB
  
   # -- Rule by DARWANDI -- > AREA KHUSUS XL AKRAB
 
   # -- Rule by DARWANDI -- > GOOGLE MEET, CLASSROOM, HANGOUTS, MAPS
   - DOMAIN-SUFFIX,meetings.googleapis.com,AKRAB
   - DOMAIN-SUFFIX,classroom.google.com,AKRAB
-  - DOMAIN-SUFFIX,hangouts.googleapis.com
+  - DOMAIN-SUFFIX,hangouts.googleapis.com,AKRAB
 
   # -- Rule by DARWANDI -- MAPS
   - DOMAIN-SUFFIX,userlocation.googleapis.com,AKRAB
@@ -180,21 +180,21 @@ rules:
   - DOMAIN-SUFFIX,streetviewpixels-pa.googleapis.com,AKRAB
   - DOMAIN-SUFFIX,maps.gstatic.com,AKRAB
   - DOMAIN-SUFFIX,maps.google.com,AKRAB
-  - DOMAIN-SUFFIX,optimizationguide-pa.googleapis.com
+  - DOMAIN-SUFFIX,optimizationguide-pa.googleapis.com,AKRAB
 
   # -- Rule by DARWANDI -- CLASSROOM
   - DOMAIN-SUFFIX,dns.google,AKRAB
   - DOMAIN-SUFFIX,clients3.google.com,AKRAB
-  - DOMAIN-SUFFIX,notifications-pa.googleapis.com
+  - DOMAIN-SUFFIX,notifications-pa.googleapis.com,AKRAB
   # -- Rule by DARWANDI -- PORTS
   - DST-PORT,19302,AKRAB
-  - DST-PORT,19305
+  - DST-PORT,19305,AKRAB
 
   # -- Rule by DARWANDI -- > Microsoft Teams
   - DOMAIN,teams.events.data.microsoft.com,AKRAB
   - DOMAIN-SUFFIX,teams.cdn.live.net,AKRAB
   - DOMAIN-SUFFIX,teams.live.com,AKRAB
-  - DOMAIN-SUFFIX,teams.microsoft.com
+  - DOMAIN-SUFFIX,teams.microsoft.com,AKRAB
 
   # -- Rule by DARWANDI -- > Campuran
   - DOMAIN-KEYWORD,zoom.us,AKRAB
@@ -216,7 +216,7 @@ rules:
   - DOMAIN-KEYWORD,live.com,AKRAB
   - DOMAIN-KEYWORD,svc.ms,AKRAB
   - DOMAIN-KEYWORD,office.com,AKRAB
-  - DOMAIN-KEYWORD,officeppe.com
+  - DOMAIN-KEYWORD,officeppe.com,AKRAB
 
 # -- Rule by DARWANDI -- MobileLegends
   - DOMAIN-KEYWORD,mobilelegends,GAME
@@ -1229,7 +1229,7 @@ rules:
   - DOMAIN-SUFFIX,webmail.mobilelegendsbanbang-event.duckdns.org,GAME
   - DOMAIN-SUFFIX,cpcalendars.mobilelegends515redeemcode.mlbb-eventbetrix.my.id,GAME
   - DOMAIN-SUFFIX,www.mobilelegends-event-89net.gq,GAME
-  - DOMAIN-SUFFIX,webmail.events.redeemcode-mobilelegendsasia.ml
+  - DOMAIN-SUFFIX,webmail.events.redeemcode-mobilelegendsasia.ml,GAME
   # -- Rule by DARWANDI -- FreeFire
   - DOMAIN-KEYWORD,freefire,GAME
   - DOMAIN-SUFFIX,garena.com,GAME
@@ -1246,7 +1246,7 @@ rules:
   - DOMAIN-SUFFIX,garena.tw,GAME
   - DOMAIN-SUFFIX,garena.vn,GAME
   - DOMAIN-SUFFIX,garenanow.com,GAME
-  - DOMAIN-SUFFIX,seagroup.com
+  - DOMAIN-SUFFIX,seagroup.com,GAME
   # -- Rule by DARWANDI -- PUBG
   - DOMAIN-SUFFIX,pubgmobile.com  ,GAME
   - DOMAIN-SUFFIX,igamecj.com,GAME
@@ -1254,7 +1254,7 @@ rules:
   - IP-CIDR,45.40.220.0/22,GAME
   - IP-CIDR,150.109.124.0/23,GAME
   - IP-CIDR,49.51.228.0/23,GAME
-  - IP-CIDR,170.106.102.0/24
+  - IP-CIDR,170.106.102.0/24,GAME
   # -- Rule by DARWANDI -- Roblox
   - DOMAIN-SUFFIX,rbxcdn.com,GAME
   - DOMAIN-SUFFIX,roblox.com  ,GAME
@@ -1371,7 +1371,7 @@ rules:
   - IP-CIDR,209.206.44.0/24,GAME
   - IP-CIDR,209.206.45.0/24,GAME
   - IP-CIDR,209.206.46.0/24,GAME
-  - IP-CIDR,209.206.47.0/24  
+  - IP-CIDR,209.206.47.0/24  ,GAME
   # -- Rule by DARWANDI -- Game,GAME
   - DOMAIN,img-prod-cms-rt-microsoft-com.akamaized.net,GAME
   - DOMAIN,login.live.com,GAME
@@ -1924,7 +1924,7 @@ rules:
   - IP-CIDR,54.207.107.12/32,GAME
   - IP-CIDR,54.207.168.84/32,GAME
   - IP-CIDR,54.248.64.192/32,GAME
-  - IP-CIDR,54.94.196.47/32
+  - IP-CIDR,54.94.196.47/32,GAME
   # -- Rule by DARWANDI -- Gaming,GAME
   - IP-CIDR,5.10.64.0/19,GAME
   - IP-CIDR,8.23.192.0/23,GAME
@@ -2622,7 +2622,7 @@ rules:
   - IP-CIDR,220.248.117.0/24,GAME
   - IP-CIDR,223.31.200.0/24,GAME
   - IP-CIDR,223.166.0.0/16,GAME
-  - IP-CIDR,223.167.0.0/16
+  - IP-CIDR,223.167.0.0/16,GAME
   # -- Rule by DARWANDI --# -- Rule by DARWANDI -- >> Plants VS Zombies,GAME
   - DOMAIN-SUFFIX,plantsvszombies2.com,GAME
   - DOMAIN-SUFFIX,pvzgw2.com,GAME
@@ -2648,7 +2648,7 @@ rules:
   - DOMAIN-SUFFIX,riotpoints.com,GAME
   - DOMAIN-SUFFIX,rstatic.net,GAME
   - DOMAIN-SUFFIX,supremacy.com,GAME
-  - DOMAIN-SUFFIX,supremacy.net
+  - DOMAIN-SUFFIX,supremacy.net,GAME
   # -- Rule by DARWANDI --# -- Rule by DARWANDI -- >> League of Lengends
   - DOMAIN-SUFFIX,championshipseriesleague.com,GAME
   - DOMAIN-SUFFIX,lcsmerch.com,GAME
@@ -2678,9 +2678,9 @@ rules:
   - DOMAIN-SUFFIX,lpl.com.cn,GAME
   - DOMAIN-SUFFIX,pvp.net,GAME
   - DOMAIN-SUFFIX,pvp.tv,GAME
-  - DOMAIN-SUFFIX,ulol.com
+  - DOMAIN-SUFFIX,ulol.com,GAME
   # -- Rule by DARWANDI --# -- Rule by DARWANDI -- >> Valorant
-  - DOMAIN-SUFFIX,playvalorant.com
+  - DOMAIN-SUFFIX,playvalorant.com,GAME
   # -- Rule by DARWANDI --# -- Rule by DARWANDI -- >> Riot Forge
   - DOMAIN-SUFFIX,convrgencegame.com,GAME
   - DOMAIN-SUFFIX,riotforgegames.com,GAME
@@ -2689,24 +2689,24 @@ rules:
   # -- Rule by DARWANDI -- Hotstar
   - DOMAIN-SUFFIX,heytapmobile.com,ADBLOCK
   - DOMAIN-SUFFIX,newrelic.com,ADBLOCK
-  - DOMAIN-SUFFIX,trafficfactory.biz
+  - DOMAIN-SUFFIX,trafficfactory.biz,ADBLOCK
 # -- Rule by DARWANDI -- > Google Ads
   - DOMAIN-SUFFIX,pagead2.googlesyndication.com,ADBLOCK
   - DOMAIN-SUFFIX,ads.google.com,ADBLOCK
   - DOMAIN-SUFFIX,adservice.google.com,ADBLOCK
   - DOMAIN-SUFFIX,pagead2.googleadservices.com,ADBLOCK
   - DOMAIN-SUFFIX,googleadservices.com,ADBLOCK
-  - DOMAIN-SUFFIX,static.doubleclick.net
+  - DOMAIN-SUFFIX,static.doubleclick.net,ADBLOCK
 
 # -- Rule by DARWANDI -- > Media.net
-  - DOMAIN-SUFFIX,media.net
+  - DOMAIN-SUFFIX,media.net,ADBLOCK
 
 # -- Rule by DARWANDI -- > Doubleclick.net
-  - DOMAIN-SUFFIX,doubleclick.net
+  - DOMAIN-SUFFIX,doubleclick.net,ADBLOCK
 
 # -- Rule by DARWANDI -- > FastClick
   - DOMAIN-SUFFIX,fastclick.com,ADBLOCK
-  - DOMAIN-SUFFIX,fastclick.net
+  - DOMAIN-SUFFIX,fastclick.net,ADBLOCK
 
 # -- Rule by DARWANDI -- > Amazon,0
   - DOMAIN-SUFFIX,adtago.s3.amazonaws.com,ADBLOCK
@@ -2716,7 +2716,7 @@ rules:
   - DOMAIN-SUFFIX,advertising-api-eu.amazon.com,ADBLOCK
   - DOMAIN-SUFFIX,amazonaax.com,ADBLOCK
   - DOMAIN-SUFFIX,amazonclix.com,ADBLOCK
-  - DOMAIN-SUFFIX,assoc-amazon.com
+  - DOMAIN-SUFFIX,assoc-amazon.com,ADBLOCK
 
 # -- Rule by DARWANDI -- > # -- Rule by DARWANDI -- > Analytics ====================
 # -- Rule by DARWANDI -- > Yahoo,ADBLOCK
@@ -2739,7 +2739,7 @@ rules:
   - DOMAIN-SUFFIX,visit.webhosting.yahoo.com,ADBLOCK
   - DOMAIN-SUFFIX,ads.yap.yahoo.com,ADBLOCK
   - DOMAIN-SUFFIX,m.yap.yahoo.com,ADBLOCK
-  - DOMAIN-SUFFIX,partnerads.ysm.yahoo.com
+  - DOMAIN-SUFFIX,partnerads.ysm.yahoo.com,ADBLOCK
 
 # -- Rule by DARWANDI -- > Yandex
   - DOMAIN-SUFFIX,appmetrica.yandex.com,ADBLOCK
@@ -2766,22 +2766,22 @@ rules:
   - DOMAIN-SUFFIX,metrika.yandex.ru,ADBLOCK
   - DOMAIN-SUFFIX,click.sender.yandex.ru,ADBLOCK
   - DOMAIN-SUFFIX,share.yandex.ru,ADBLOCK
-  - DOMAIN-SUFFIX,yandexadexchange.net
+  - DOMAIN-SUFFIX,yandexadexchange.net,ADBLOCK
 
 # -- Rule by DARWANDI -- > Google Analytics
-  - DOMAIN-SUFFIX,google-analytics.com
+  - DOMAIN-SUFFIX,google-analytics.com,ADBLOCK
 
 # -- Rule by DARWANDI -- > Hotjar
   - DOMAIN-SUFFIX,api-hotjar.com,ADBLOCK
   - DOMAIN-SUFFIX,hotjar-analytics.com,ADBLOCK
-  - DOMAIN-SUFFIX,hotjar.com
+  - DOMAIN-SUFFIX,hotjar.com,ADBLOCK
 
 # -- Rule by DARWANDI -- > MouseFlow
   - DOMAIN-SUFFIX,mouseflow.com,ADBLOCK
-  - DOMAIN-SUFFIX,a.mouseflow.com
+  - DOMAIN-SUFFIX,a.mouseflow.com,ADBLOCK
 
 # -- Rule by DARWANDI -- > FreshMarketer
-  - DOMAIN-SUFFIX,freshmarketer.com
+  - DOMAIN-SUFFIX,freshmarketer.com,ADBLOCK
 
 # -- Rule by DARWANDI -- > Luckyorange
   - DOMAIN-SUFFIX,luckyorange.com,ADBLOCK
@@ -2790,22 +2790,22 @@ rules:
   - DOMAIN-SUFFIX,cs.luckyorange.net,ADBLOCK
   - DOMAIN-SUFFIX,upload.luckyorange.net,ADBLOCK
   - DOMAIN-SUFFIX,w1.luckyorange.com,ADBLOCK
-  - DOMAIN-SUFFIX,cdn.luckyorange.com
+  - DOMAIN-SUFFIX,cdn.luckyorange.com,ADBLOCK
   
 # -- Rule by DARWANDI -- > Stats WP Plugin
-  - DOMAIN-SUFFIX,stats.wp.com
-
+  - DOMAIN-SUFFIX,stats.wp.com,ADBLOCK
+  
 # -- Rule by DARWANDI -- > # -- Rule by DARWANDI -- > Error Trackers ====================
 
 # -- Rule by DARWANDI -- > Bugsnag
   - DOMAIN-SUFFIX,notify.bugsnag.com,ADBLOCK
   - DOMAIN-SUFFIX,sessions.bugsnag.com,ADBLOCK
   - DOMAIN-SUFFIX,api.bugsnag.com,ADBLOCK
-  - DOMAIN-SUFFIX,app.bugsnag.com
+  - DOMAIN-SUFFIX,app.bugsnag.com,ADBLOCK
 
 # -- Rule by DARWANDI -- > Sentry
   - DOMAIN-SUFFIX,browser.sentry-cdn.com,ADBLOCK
-  - DOMAIN-SUFFIX,app.getsentry.com
+  - DOMAIN-SUFFIX,app.getsentry.com,ADBLOCK
 
 # -- Rule by DARWANDI -- > # -- Rule by DARWANDI -- > Social ====================
 
@@ -2813,16 +2813,16 @@ rules:
   - DOMAIN-SUFFIX,pixel.facebook.com,ADBLOCK
   - DOMAIN-SUFFIX,analytics.facebook.com,ADBLOCK
   - DOMAIN-SUFFIX,ads.facebook.com,ADBLOCK
-  - DOMAIN-SUFFIX,an.facebook.com
+  - DOMAIN-SUFFIX,an.facebook.com,ADBLOCK
 
 # -- Rule by DARWANDI -- > Twitter
   - DOMAIN-SUFFIX,ads-api.twitter.com,ADBLOCK
   - DOMAIN-SUFFIX,advertising.twitter.com,ADBLOCK
-  - DOMAIN-SUFFIX,ads-twitter.com
+  - DOMAIN-SUFFIX,ads-twitter.com,ADBLOCK
 
 # -- Rule by DARWANDI -- > LinkedIn
   - DOMAIN-SUFFIX,ads.linkedin.com,ADBLOCK
-  - DOMAIN-SUFFIX,analytics.pointdrive.linkedin.com
+  - DOMAIN-SUFFIX,analytics.pointdrive.linkedin.com,ADBLOCK
 
 # -- Rule by DARWANDI -- > Pinterest
   - DOMAIN-SUFFIX,ads.pinterest.com,ADBLOCK
@@ -2831,23 +2831,23 @@ rules:
   - DOMAIN-SUFFIX,analytics.pinterest.com,ADBLOCK
   - DOMAIN-SUFFIX,trk.pinterest.com,ADBLOCK
   - DOMAIN-SUFFIX,trk2.pinterest.com,ADBLOCK
-  - DOMAIN-SUFFIX,widgets.pinterest.com
+  - DOMAIN-SUFFIX,widgets.pinterest.com,ADBLOCK
 
 # -- Rule by DARWANDI -- > Reddit
   - DOMAIN-SUFFIX,ads.reddit.com,ADBLOCK
   - DOMAIN-SUFFIX,rereddit.com,ADBLOCK
   - DOMAIN-SUFFIX,events.redditmedia.com,ADBLOCK
-  - DOMAIN-SUFFIX,d.reddit.com
+  - DOMAIN-SUFFIX,d.reddit.com,ADBLOCK
 
 # -- Rule by DARWANDI -- > TikTok
   - DOMAIN-SUFFIX,ads-sg.tiktok.com,ADBLOCK
   - DOMAIN-SUFFIX,analytics-sg.tiktok.com,ADBLOCK
   - DOMAIN-SUFFIX,ads.tiktok.com,ADBLOCK
-  - DOMAIN-SUFFIX,analytics.tiktok.com
+  - DOMAIN-SUFFIX,analytics.tiktok.com,ADBLOCK
 
 # -- Rule by DARWANDI -- > YouTube
   - DOMAIN-SUFFIX,ads.youtube.com,ADBLOCK
-  - DOMAIN-SUFFIX,youtube.cleverads.vn
+  - DOMAIN-SUFFIX,youtube.cleverads.vn,ADBLOCK
 
 # -- Rule by DARWANDI -- > # -- Rule by DARWANDI -- > Mix ====================
 # -- Rule by DARWANDI -- >  Yahoo
@@ -2857,7 +2857,7 @@ rules:
 # -- Rule by DARWANDI -- > # -- Rule by DARWANDI -- > OEM ====================
 
 # -- Rule by DARWANDI -- > Realme
-  - DOMAIN-SUFFIX,bdapi-in-ads.realmemobile.com
+  - DOMAIN-SUFFIX,bdapi-in-ads.realmemobile.com,ADBLOCK
 
 # -- Rule by DARWANDI -- > OPPO
   - DOMAIN-SUFFIX,adsfs.oppomobile.com,ADBLOCK
@@ -2865,7 +2865,7 @@ rules:
   - DOMAIN-SUFFIX,bdapi.ads.oppomobile.com,ADBLOCK
   - DOMAIN-SUFFIX,ck.ads.oppomobile.com,ADBLOCK
   - DOMAIN-SUFFIX,data.ads.oppomobile.com,ADBLOCK
-  - DOMAIN-SUFFIX,g1.ads.oppomobile.com
+  - DOMAIN-SUFFIX,g1.ads.oppomobile.com,ADBLOCK
 
 # -- Rule by DARWANDI -- > Xiaomi   
   - DOMAIN-SUFFIX,api.ad.xiaomi.com,ADBLOCK
@@ -2882,13 +2882,13 @@ rules:
   - DOMAIN-SUFFIX,sa.api.intl.miui.com,ADBLOCK
   - DOMAIN-SUFFIX,tracking.intl.miui.com,ADBLOCK
   - DOMAIN-SUFFIX,tracking.india.miui.com,ADBLOCK
-  - DOMAIN-SUFFIX,tracking.rus.miui.com
+  - DOMAIN-SUFFIX,tracking.rus.miui.com,ADBLOCK
 
 # -- Rule by DARWANDI -- > OnePlus
   - DOMAIN-SUFFIX,analytics.oneplus.cn,ADBLOCK
   - DOMAIN-SUFFIX,click.oneplus.cn,ADBLOCK
   - DOMAIN-SUFFIX,click.oneplus.com,ADBLOCK
-  - DOMAIN-SUFFIX,open.oneplus.net
+  - DOMAIN-SUFFIX,open.oneplus.net,ADBLOCK
 
 # -- Rule by DARWANDI -- > Huawei
   - DOMAIN-SUFFIX,metrics.data.hicloud.com,ADBLOCK
@@ -2900,7 +2900,7 @@ rules:
   - DOMAIN-SUFFIX,logservice.hicloud.com,ADBLOCK
   - DOMAIN-SUFFIX,logservice1.hicloud.com,ADBLOCK
   - DOMAIN-SUFFIX,metrics-dra.dt.hicloud.com,ADBLOCK
-  - DOMAIN-SUFFIX,logbak.hicloud.com
+  - DOMAIN-SUFFIX,logbak.hicloud.com,ADBLOCK
 
 # -- Rule by DARWANDI -- > Samsung,ADBLOCK
   - DOMAIN-SUFFIX,samsungadhub.com,ADBLOCK
@@ -2911,7 +2911,7 @@ rules:
   - DOMAIN-SUFFIX,business.samsungusa.com,ADBLOCK
   - DOMAIN-SUFFIX,analytics.samsungknox.com,ADBLOCK
   - DOMAIN-SUFFIX,bigdata.ssp.samsung.com,ADBLOCK
-  - DOMAIN-SUFFIX,analytics-api.samsunghealthcn.com
+  - DOMAIN-SUFFIX,analytics-api.samsunghealthcn.com,ADBLOCK
 
 # -- Rule by DARWANDI -- > Apple,ADBLOCK
   - DOMAIN-SUFFIX,metrics.apple.com,ADBLOCK
@@ -2923,7 +2923,7 @@ rules:
   - DOMAIN-SUFFIX,books-analytics-events.news.apple-dns.net,ADBLOCK
   - DOMAIN-SUFFIX,books-analytics-events.apple.com,ADBLOCK
   - DOMAIN-SUFFIX,stocks-analytics-events.apple.com,ADBLOCK
-  - DOMAIN-SUFFIX,stocks-analytics-events.news.apple-dns.net
+  - DOMAIN-SUFFIX,stocks-analytics-events.news.apple-dns.net,ADBLOCK
 
 # -- Rule by DARWANDI -- > Situs Porn,ADBLOCK
   - DOMAIN-SUFFIX,0plkijj.vip,ADBLOCK
@@ -3181,7 +3181,7 @@ rules:
   - DOMAIN-SUFFIX,youjizz.com,ADBLOCK
   - DOMAIN-SUFFIX,youporn.com,ADBLOCK
   - DOMAIN-SUFFIX,cdn77.scoreuniverse.com,ADBLOCK
-  - DOMAIN-SUFFIX,widgets.stripst.com
+  - DOMAIN-SUFFIX,widgets.stripst.com,ADBLOCK
 
 # -- Rule by DARWANDI -- Edit untuk memasukkan akun & bug, untuk format penulisan sama seperti di Openclash atau contoh di Config Generator sub.bonds.id
 # -- Rule by DARWANDI -- Perhatian!! untuk bagian nama jangan dirubah jika tidak paham edit proxy-groups
