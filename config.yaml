@@ -22,6 +22,7 @@ dns:
   fallback:
     - https://dns.google/dns-query
 
+# proxy provider
 proxy-providers:
   VPN:
     type: file
@@ -31,44 +32,42 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 300
       
-#Gunakan tanda pagar menghiden, jika salah satu server tidak kepakai
+# proxy groups
 proxy-groups:
-  - name: LOADBALANCE
-    type: load-balance
-    strategy: round-robin
-    disable-udp: false
-    url: http://www.gstatic.com/generate_204
-    interval: '300'
-    use:
-      - VPN
-  - name: BEST-PING
-    type: url-test
-    disable-udp: false
-    url: http://www.gstatic.com/generate_204
-    interval: '300'
-    tolerance: '150'
-    use:
-      - VPN
-  - name: AKRAB
-    type: select
-    proxies:
-      - LOADBALANCE
-      - BEST-PING
-      - DIRECT
-  - name: GAME
-    type: select
-    proxies:
-      - LOADBALANCE
-      - BEST-PING
-      - DIRECT
-  - name: ADBLOCK
-    type: select
-    proxies:
-      - LOADBALANCE
-      - BEST-PING
-      - REJECT
+- name: LOADBALANCE
+  type: load-balance
+  strategy: round-robin
+  disable-udp: false
   url: http://www.gstatic.com/generate_204
   interval: '300'
+  use:
+    - VPN
+- name: BEST-PING
+  type: url-test
+  disable-udp: false
+  url: http://www.gstatic.com/generate_204
+  interval: '300'
+  tolerance: '150'
+  use:
+    - VPN
+- name: AKRAB
+  type: select
+  proxies:
+    - LOADBALANCE
+    - BEST-PING
+    - DIRECT
+- name: GAME
+  type: select
+  proxies:
+    - LOADBALANCE
+    - BEST-PING
+    - DIRECT
+- name: ADBLOCK
+  type: select
+  proxies:
+    - LOADBALANCE
+    - BEST-PING
+    - REJECT
    
 rules:
   # -- Rule by DARWANDI -- > WHATSAPP
