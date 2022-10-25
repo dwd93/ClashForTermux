@@ -21,6 +21,10 @@ echo -e $b"➤ "$w" installing pacakge: "$g"unzip"$w
 pkg install unzip
 echo ""
 
+echo -e $b"➤ "$w" installing pacakge: "$g"micro"$w
+pkg install micro
+echo ""
+
 cd $HOME/ClashForTermux
 sleep 2
 
