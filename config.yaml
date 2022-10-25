@@ -1,45 +1,37 @@
-# -- Rule by DARWANDI -- Config Universal for OpenClash, ClashForAndroid & ClashForMagisk
-# -- Rule by DARWANDI -- Config by. Darwandi
-# -- Rule by DARWANDI -- Youtube ->> https://youtube.com/channel/UCEivnkOPZQsr8UzPmnH8a2w
-# -- Rule by DARWANDI -- Group Telegram ->> https://t.me/+xCof7RFczCNhMzFl
-
-
-# -- Rule by DARWANDI -- Base config
 port: 7890
 socks-port: 7891
-redir-port: 7892
+#redir-port: 7892
 mixed-port: 7893
-tproxy-port: 7895
-ipv6: false
-mode: rule
-log-level: silent
+#tproxy-port: 7895
+mode: global
+log-level: info
 allow-lan: true
-external-controller: 127.0.0.1:7890
-secret: "DWD"
+external-controller: 0.0.0.0:9090
+secret : ""
 bind-address: "*"
-unified-delay: true
-profile:
-  store-selected: true
+external-ui: yacd-gh-pages
 dns:
   enable: true
   ipv6: false
   enhanced-mode: redir-host
-  listen: 0.0.0.0:7874
+  listen: 127.0.0.1:7894
+  use-hosts: true
   nameserver:
-    - 8.8.8.8
-    - 1.0.0.1
-    - https://dns.google/dns-query
-  fallback:
-    - 1.1.1.1
-    - 8.8.4.4
     - https://cloudflare-dns.com/dns-query
-    - 112.215.203.254
-  default-nameserver:
-    - 8.8.8.8
-    - 1.1.1.1
-    - 112.215.203.254
-    
-# -- Rule by DARWANDI -- Jangan diedit jika tidak paham
+    - tls://1dot1dot1dot1.cloudflare-dns.com
+  fallback:
+    - https://dns.google/dns-query
+
+proxy-providers:
+  VPN:
+    type: file
+    path: "./vpn.yaml"
+    health-check:
+      enable: false
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+      
+#Gunakan tanda pagar menghiden, jika salah satu server tidak kepakai
 proxy-groups:
   - name: LOADBALANCE
     type: load-balance
@@ -75,8 +67,10 @@ proxy-groups:
       - LOADBALANCE
       - BEST-PING
       - REJECT
+  url: http://www.gstatic.com/generate_204
+  interval: '300'
+   
 rules:
-  - MATCH,GLOBAL
   # -- Rule by DARWANDI -- > WHATSAPP
   - DOMAIN-KEYWORD,whatsapp.com,AKRAB
   - DOMAIN-KEYWORD,whatsapp.net,AKRAB
@@ -3182,15 +3176,4 @@ rules:
   - DOMAIN-SUFFIX,youporn.com,ADBLOCK
   - DOMAIN-SUFFIX,cdn77.scoreuniverse.com,ADBLOCK
   - DOMAIN-SUFFIX,widgets.stripst.com,ADBLOCK
-
-# -- Rule by DARWANDI -- Edit untuk memasukkan akun & bug, untuk format penulisan sama seperti di Openclash atau contoh di Config Generator sub.bonds.id
-# -- Rule by DARWANDI -- Perhatian!! untuk bagian nama jangan dirubah jika tidak paham edit proxy-groups
-
-proxy-providers:
-  VPN:
-    type: file
-    path: "./DWD_vpn/vpn.yaml"
-    health-check:
-      enable: false
-      url: http://www.gstatic.com/generate_204
-      interval: 300
+  - MATCH,GLOBAL
