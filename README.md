@@ -1,9 +1,9 @@
 # Clash For Termux Without Root
 
 # Install
-- pkg update && pkg install upgrade -y
+- apt update && atp install upgrade -y
 
-- pkg install git -y
+- apt install git -y
 
 - git clone https://github.com/dwd93/ClashForTermux.git
 
@@ -12,7 +12,7 @@
 - cd
 
 # Edit akun VPN
-- ketik micro .config/clash/DWD_vpn/vpn.yaml
+- ketik micro .config/clash/vpn.yaml
 - ctrl + s -> untuk save
 - ctrl + q -> untuk keluar
 
