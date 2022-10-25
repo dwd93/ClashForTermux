@@ -5,8 +5,6 @@
 
 - pkg install git -y
 
-- pkg install micro -y
-
 - git clone https://github.com/dwd93/ClashForTermux.git
 
 - cd ClashForTermux && bash install.sh
