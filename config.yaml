@@ -70,6 +70,7 @@ proxy-groups:
     - REJECT
    
 rules:
+
   # -- Rule by DARWANDI -- > WHATSAPP
   - DOMAIN-KEYWORD,whatsapp.com,AKRAB
   - DOMAIN-KEYWORD,whatsapp.net,AKRAB
